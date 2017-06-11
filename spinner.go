@@ -123,7 +123,6 @@ func (s *Spinner) Stop() {
 	defer s.lock.Unlock()
 	if s.active {
 		s.active = false
-		s.erase()
 		if s.FinalMSG != "" {
 			fmt.Fprintf(s.Writer, s.FinalMSG)
 		}
